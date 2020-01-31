@@ -1,4 +1,4 @@
-# First and foremost, I am not the original author of those 2 projects. I simply combined those 2 awesome project into one and merged both docker-compose.yml file.
+# First and foremost, I am not the original author of those 2 projects. I simply combined those 2 awesome projects into one and merged both docker-compose.yml file.
 
 You can find the original project here :
 
