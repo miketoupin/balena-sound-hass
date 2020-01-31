@@ -3,6 +3,7 @@
 You can find the original project here :
 
 https://github.com/balenalabs/balena-sound
+
 https://github.com/balena-io-playground/balena-homeassistant
 
 ![](https://raw.githubusercontent.com/balena-io-projects/balena-sound/master/images/balenaSound-logo.png)
