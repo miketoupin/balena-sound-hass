@@ -82,14 +82,14 @@ To enable Spotify login you can add your username/e-mail and password, which are
 * If using Spotify Connect: open Spotify and choose the balenaSound device as an alternate output.
 * Let the music play!
 
-balena-homeassistant
-Home Assistant with balenaSense using MQTT
+#balena-homeassistant
+##Home Assistant with balenaSense using MQTT
 
 A full step-by-step tutorial is available here: https://www.balena.io/blog/monitor-air-quality-around-your-home-with-home-assistant-and-balena/
 
 Home Assistant is a popular open source home automation system that is often run from low-cost devices like a Raspberry Pi. Here’s how to use balenaSense to push its sensor data to Home Assistant using MQTT.
 
-Hardware required
+##Hardware required
 Here’s the list of items required for a basic setup:
 
 Raspberry Pi 3B or greater (A B+ or 4B works great, and less powerful Pis can be used albeit with lower performance)
@@ -109,9 +109,10 @@ You can enable MQTT in Home Assistant from the Configuration > Integrations menu
 
 mqtt:  
   broker: mqtt
+
 (note that there must be two spaces before the word broker.) Here we are telling Home Assistant to enable MQTT, and providing the hostname of our local MQTT broker container (you could also provide the IP address of the local container or the IP address of any other reachable broker you might want to use.) Any time you change the configuration, you should go back to Home Assistant and use its configuration checker to make sure your changes do not contain any errors. If there are no errors, restart Home Assistant for your changes to take effect.
 
-Integrate Home Assistant with balenaSense
+##Integrate Home Assistant with balenaSense
 You can follow the balenaSense tutorial to create a self-contained air quality monitoring device. Confirm that your balenaSense installation is up and running on the same network as this project.
 
 Add a device variable to your balenaSense device in the balenaCloud dashboard. In the “Add variable” popup, for “NAME” enter TELEGRAF_MQTT_URL_PORT and then paste the IP from your Home Assistant application into the “VALUE” box. Append :1883 after the address which is the port number. After clicking "Add" balenaSense will restart and begin publishing its sensor data to Home Assistant.
@@ -124,4 +125,5 @@ To see a pre-formatted Lovelace version of the UI in Home Assistant, activate it
 
 lovelace:  
   mode: yaml
+
 This change will cause Home Assistant to utilize the ui-lovelace.yaml file we have included.
